@@ -1,7 +1,7 @@
 ﻿using Alura.Adopet.Console.Comandos;
 using Alura.Adopet.Console.Servicos;
 
-var httpClientPet = new HttpClientPet();
+var httpClientPet = new HttpClientPet(new AdopetAPIClientFactory().CreateClient("adopet"));
 Dictionary<string, IComando> comandosDoSistema = new()
 {
     {"help",new Help() },
